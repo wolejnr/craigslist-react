@@ -1,7 +1,9 @@
+@import "reset";
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-@import "reset";
 @import "home";
+@import "listings";
+@import "details";
 
 * {
   box-sizing: border-box;
@@ -35,12 +37,48 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      color: #ffffff;
+      text-decoration: none;
+      &:hover {
+        color: red;
+      }
     }
-    .city {
+    .city-dropdown {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px;
+      padding: 15px 20px;
+      position: relative;
+      cursor: pointer;
+
+      .scroll-area {
+        position: absolute;
+        background: rgba(0,0,0,.5);
+        min-width: 150px;
+        top: 35px;
+        left: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease-in-out; 
+
+        &.active {
+          visibility: visible;
+          top: 50px;
+          opacity: 1; 
+        }
+
+        
+        ul {
+          li {
+            padding: 15px;
+            &:hover {
+              background: rgba(0,0,0,.2);
+            }
+          }
+        }
+      }
     }
   }
 

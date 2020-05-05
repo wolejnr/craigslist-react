@@ -12,7 +12,8 @@
     "proxy": "gulp watch-proxy",
     "static:dev": "gulp static-dev",
     "static:build": "gulp static-build",
-    "imgs": "gulp imagemin"
+    "imgs": "gulp imagemin",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -25,7 +26,7 @@
     "@babel/preset-stage-0": "^7.0.0",
     "@babel/register": "^7.0.0",
     "autoprefixer": "^9.3.1",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
     "babel-preset-env": "^1.7.0",
@@ -64,6 +65,8 @@
     "@babel/plugin-transform-async-to-generator": "^7.1.0",
     "express": "^4.17.1",
     "gulp-pug": "^4.0.1",
+    "query-string": "^6.12.1",
+    "react-router-dom": "^5.1.2",
     "serve-static": "^1.14.1",
     "svelte": "^3.4.3",
     "svelte-loader": "^2.13.4",
